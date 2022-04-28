@@ -1,4 +1,5 @@
 kind: pipeline
+type: docker
 name: kernel_realme_sdm710
 
 platform:
@@ -9,7 +10,7 @@ clone:
   depth: 1
 
 steps:
-  - name: spiral_kernel
+  - name: test_kernel
     image: ubuntu:latest
     environment:
       CI_CHANNEL_ID:
@@ -20,5 +21,10 @@ steps:
     commands:
       - apt-get update && apt-get install -y bison build-essential bc bison curl libssl-dev git zip python flex
       -  git clone --depth=1 https://github.com/viciouspup/Drone-scripts.git script && cd script
-      - bash setup-drone.sh --proton
-      - bash build-kernel.sh --proton
+      - ./setup-drone.sh --proton
+      - ./build-kernel.sh --proton
+      when:
+      branch:
+        - bm
+      event:
+        - push
