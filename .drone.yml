@@ -21,8 +21,8 @@ steps:
     commands:
       - apt-get update && apt-get install -y bison build-essential bc bison curl libssl-dev git zip python flex
       -  git clone --depth=1 https://github.com/viciouspup/Drone-scripts.git script && cd script
-      - ./setup-drone.sh --proton
-      - ./build-kernel.sh --proton
+      - ./setup-drone --proton
+      - ./build-kernel --proton
       when:
       branch:
         - bm
