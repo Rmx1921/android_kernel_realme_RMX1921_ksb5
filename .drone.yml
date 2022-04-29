@@ -29,8 +29,8 @@ steps:
       - git clone https://github.com/Rmx1921/Drone-scripts.git -b main script && cd script
       - chmod 777 setup-drone
       - chmod 777 build-kernel
-      - ./setup-drone --proton
-      - ./build-kernel --proton
+      - ./setup-drone --proton 
+      - ./build-kernel --proton --lto
     when:
       branch:
         - bm
