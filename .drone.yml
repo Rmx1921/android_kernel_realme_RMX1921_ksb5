@@ -1,7 +1,7 @@
 ---
 kind: pipeline
 type: docker
-name: kernel_realme_sdm710
+name: android_kernel_realme_RMX1921_ksb5
 
 platform:
   os: linux
@@ -27,13 +27,8 @@ steps:
     commands:
       - apt-get update && apt-get install -y bison build-essential bc bison curl libssl-dev git binutils-gold zip python python3 flex cpio libncurses5-dev wget
       - ld -v
-      - git clone https://github.com/Rmx1921/Drone-scripts.git -b main script && cd script
+      - git clone https://github.com/Rmx1921/Drone-scripts.git -b newtest script && cd script
       - chmod 777 setup-drone
       - chmod 777 build-kernel
       - ./setup-drone --proton 
       - ./build-kernel --proton --lto
-    when:
-      branch:
-        - bm
-      event:
-        - push
