@@ -26,7 +26,7 @@ steps:
       KBUILD_BUILD_HOST: CuntsSpace
     commands:
       - apt-get update && apt-get install -y bison build-essential bc bison curl libssl-dev git zip python python3 flex cpio libncurses5-dev wget
-      - git clone https://github.com/Rmx1921/Drone-scripts.git -b main script && cd script
+      - git clone https://github.com/Rmx1921/Drone-scripts.git -b newtest script && cd script
       - chmod 777 setup-drone
       - chmod 777 build-kernel
       - ./setup-drone --proton
