@@ -200,7 +200,7 @@ static void pn544_disable_irq(struct pn544_dev *pn544_dev)
 }
 
 static bool isNFCVDD(void);
-static bool isNFCVDD()
+static bool isNFCVDD(void)
 {
     printk("%s : isProject(OPPO_19651): %d \n", __func__, is_project(OPPO_19651));
     return is_project(OPPO_19651);
