@@ -205,7 +205,7 @@ static struct clk_alpha_pll gpu_cc_pll1 = {
 				MIN, 615000000,
 				LOW, 1066000000,
 				LOW_L1, 1600000000,
-				NOMINAL, 2000000000),
+				HIGH, 2000000000),
 		},
 	},
 };
