@@ -119,7 +119,7 @@
 			regulator-max-microvolt
 				= <RPMH_REGULATOR_LEVEL_TURBO>;
 			qcom,init-voltage-level
-				= <RPMH_REGULATOR_LEVEL_LOW_SVS>;
+				= <RPMH_REGULATOR_LEVEL_MIN_SVS>;
 		};
 	};
 
